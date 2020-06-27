@@ -6,7 +6,7 @@ Install
 gem install context_manager
 ```
 
-Sample context manager to open and close a file
+A sample context manager to open and close a file. Similarly, you can write your own.
 ```
 def open(filename)
   f = File.open(filename)
