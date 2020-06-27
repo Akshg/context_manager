@@ -12,7 +12,7 @@ A sample context manager to open and close a file. Similarly, you can write your
 def open(filename)
   f = File.open(filename)
   
-  close_file = after do |file|
+  close_file = finish do |file|
     file.close
   end
 
@@ -39,7 +39,7 @@ def connect_db
     password: 'root',
     database: "my_database"
   )
-  close_conn = after { |conn| conn.close }
+  close_conn = finish { |conn| conn.close }
   [conn, close_conn]
 end
 ```
@@ -59,7 +59,7 @@ Context manager that opens file in read mode
 ```
 def open(filename)
   f = File.open(filename)
-  close_file = after { |file| file.close }
+  close_file = finish { |file| file.close }
   [f, close_file]
 end
 ```
@@ -67,7 +67,7 @@ Context manager that opens file in write mode
 ```
 def write(filename)
   f = File.open(filename, 'w')
-  close_file = after { |file| file.close }
+  close_file = finish { |file| file.close }
   [f, close_file]
 end
 ```

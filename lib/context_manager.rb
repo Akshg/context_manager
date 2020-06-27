@@ -1,4 +1,4 @@
-def after(&block)
+def finish(&block)
   Proc.new do |obj|
     block.call(obj)
   end
