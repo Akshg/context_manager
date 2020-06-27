@@ -1,6 +1,11 @@
 # context_manager
 Python like context manager in Ruby
 
+Install
+```
+gem install context_manager
+```
+
 Sample context manager to open and close a file
 ```
 def open(filename)
