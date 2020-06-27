@@ -1,5 +1,5 @@
-# Context Manager
-Python like context manager in Ruby
+# Context Managers
+Python like context mangers in Ruby. Context managers allow you to allocate and release resources precisely when you want to.
 
 **Install**
 ```
