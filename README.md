@@ -26,6 +26,7 @@ with open('filename.txt') do |file|
   file.read
 end
 ```
+<<<<<<< HEAD
 
 ## Examples
 
@@ -78,3 +79,5 @@ with open('read_from_file.txt') do |read_file|
   end
 end
 ```
+=======
+>>>>>>> 0101cfd4beb57d4d73318b5173e886280524007d
