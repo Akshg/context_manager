@@ -52,6 +52,7 @@ end
 ```
 
 **2. Read from a file and write to other file**
+
 You can even write a nested context manager. For example, If you want to read contents from a file and write it to some other file.
 
 Context manager that opens file in read mode
