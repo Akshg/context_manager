@@ -1,4 +1,4 @@
-# context_manager
+# context manager
 Python like context manager in Ruby
 
 Install
