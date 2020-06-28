@@ -23,6 +23,8 @@ end
 
 **Calling the context manager**
 ```
+require 'context_manager'
+
 with open('filename.txt') do |file|
   file.read
 end
