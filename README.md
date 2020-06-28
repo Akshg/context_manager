@@ -72,10 +72,10 @@ def write(filename)
   [f, close_file]
 end
 ```
-Call both the context managers
+Call write context manager inside read
 ```
 with open('read_from_file.txt') do |read_file|
-  with write('wite_to_file.txt') do |write_file|
+  with write('write_to_file.txt') do |write_file|
     write_file.write read_file.read
   end
 end
