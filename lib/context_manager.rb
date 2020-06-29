@@ -1,12 +1,19 @@
+class ContextNotFound < StandardError; end
+
 def finish(&block)
-  Proc.new do |obj|
-    block.call(obj)
-  end
+  Proc.new { |obj| block.call(obj) }
 end
 
 def with(*args)
-  arg = args[0]
-  yield_obj = arg[0]
+  begin
+    arg = args[0]
+    yield_obj = arg[0]
+  rescue
+    raise ContextNotFound, 'no context found'
+  end
+
+  raise ContextNotFound, 'no context found' if yield_obj.nil?
+
   begin
     yield yield_obj
   ensure
