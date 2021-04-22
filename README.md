@@ -5,32 +5,17 @@ Python like context mangers in Ruby. Context managers allow you to allocate and 
 ```
 gem install context_manager
 ```
-
-**Write you own context manager**
-
-A sample context manager to open and close a file. Similarly, you can write your own.
+## Use in-built context manager methods
+##### 1. Open a file
+It will open the file passed as parameter and close it automatically.
 ```
-def open(filename)
-  f = File.open(filename)
-  
-  close_file = finish do |file|
-    file.close
-  end
-
-  [f, close_file]
+with cm_fopen('some_file.txt') do |file|
+    puts file.read
 end
 ```
+**More context manager methods are coming soon. If you have any suggestions for any context manager method raise an enhancement issue.**
 
-**Calling the context manager**
-```
-require 'context_manager'
-
-with open('filename.txt') do |file|
-  file.read
-end
-```
-
-## Examples
+## Write you own context manager
 
 **1. Connect to DB**
 ```

@@ -20,3 +20,13 @@ def with(*args)
     arg[1].call(yield_obj)
   end
 end
+
+def cm_fopen(filename)
+  f = File.open(filename)
+  
+  close_file = finish do |file|
+    file.close
+  end
+
+  [f, close_file]
+end
