@@ -1,4 +1,6 @@
 # Context Managers
+[![Gem Version](https://badge.fury.io/rb/context_manager.svg)](https://badge.fury.io/rb/context_manager)
+
 Python like context mangers in Ruby. Context managers allow you to allocate and release resources precisely when you want to.
 
 **Install**
